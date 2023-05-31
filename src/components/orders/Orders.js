@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
 
-const Orders = (props, user) => {
+const Orders = (props) => {
   const { orders} = props;
-  const {name, email} = user;
+  
   return (
     <table className="table">
       <thead>
@@ -24,9 +24,9 @@ const Orders = (props, user) => {
         {orders && orders.map((order) => (
           <tr key={order._id}>
             <td>
-              <b>{order.user.name}</b>
+              <b>{order.user}</b>
             </td>
-            <td>{order.user.email}</td>
+            <td>{order.user}</td>
             <td>${order.totalPrice}</td>
             <td>
               {order.isPaid ? (
