@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import moment from "moment";
 
 const Orders = (props) => {
-  const { orders, name, email} = props;
+  const { orders} = props;
   return (
     <table className="table">
       <thead>
